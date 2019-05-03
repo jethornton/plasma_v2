@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: plasma-v2
+Version: 0.0.1
+Summary: plasma_v2 - A QtPyVCP based Virtual Control Panel for LinuxCNC
+Home-page: https://github.com/USERNAME/REPO
+Author: John Doe
+Author-email: <doe.john@example.com>
+License: UNKNOWN
+Download-URL: https://github.com/USERNAME/REPO/tarball/master
+Description: # plasma_v2
+        QtPyVCP GUI for a Plasma table
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

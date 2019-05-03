@@ -1,0 +1,7 @@
+This enum contains the predefined font weights:
+Constant      Value
+QFont::Light    25
+QFont::Normal   50
+QFont::DemiBold 63
+QFont::Bold     75
+QFont::Black    87

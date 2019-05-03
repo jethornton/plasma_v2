@@ -1,0 +1,1392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>811</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QWidget" name="verticalWidget" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>5</number>
+       </property>
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <property name="topMargin">
+        <number>5</number>
+       </property>
+       <property name="rightMargin">
+        <number>5</number>
+       </property>
+       <property name="bottomMargin">
+        <number>5</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="horizontalWidget" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="spacing">
+           <number>5</number>
+          </property>
+          <property name="leftMargin">
+           <number>5</number>
+          </property>
+          <property name="topMargin">
+           <number>5</number>
+          </property>
+          <property name="rightMargin">
+           <number>5</number>
+          </property>
+          <property name="bottomMargin">
+           <number>5</number>
+          </property>
+          <item>
+           <widget class="QTabWidget" name="tabWidget">
+            <property name="minimumSize">
+             <size>
+              <width>650</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="tabPosition">
+             <enum>QTabWidget::South</enum>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="tab_3">
+             <attribute name="title">
+              <string>Plot</string>
+             </attribute>
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+               <widget class="QWidget" name="verticalWidget" native="true">
+                <layout class="QVBoxLayout" name="verticalLayout_3">
+                 <item>
+                  <widget class="VTKBackPlot" name="vtkbackplot"/>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="horizontalWidget" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_3">
+                    <property name="spacing">
+                     <number>5</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>5</number>
+                    </property>
+                    <item>
+                     <widget class="QPushButton" name="viewP">
+                      <property name="text">
+                       <string>P</string>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">viewBtnGrp</string>
+                      </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="viewX">
+                      <property name="text">
+                       <string>X</string>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">viewBtnGrp</string>
+                      </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="viewY">
+                      <property name="text">
+                       <string>Y</string>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">viewBtnGrp</string>
+                      </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="viewZ">
+                      <property name="text">
+                       <string>Z</string>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
+                      <property name="checked">
+                       <bool>true</bool>
+                      </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">viewBtnGrp</string>
+                      </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="viewZ2">
+                      <property name="text">
+                       <string>Z2</string>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">viewBtnGrp</string>
+                      </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="viewPlus">
+                      <property name="text">
+                       <string>+</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="viewMinus">
+                      <property name="text">
+                       <string>-</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="viewClear">
+                      <property name="text">
+                       <string>Clear</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="tab_4">
+             <attribute name="title">
+              <string>Page</string>
+             </attribute>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="verticalWidget" native="true">
+            <layout class="QVBoxLayout" name="verticalLayout_5">
+             <property name="spacing">
+              <number>5</number>
+             </property>
+             <property name="leftMargin">
+              <number>5</number>
+             </property>
+             <property name="topMargin">
+              <number>5</number>
+             </property>
+             <property name="rightMargin">
+              <number>5</number>
+             </property>
+             <property name="bottomMargin">
+              <number>5</number>
+             </property>
+             <item>
+              <widget class="QTabWidget" name="tabWidget_2">
+               <property name="tabPosition">
+                <enum>QTabWidget::South</enum>
+               </property>
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <widget class="QWidget" name="tab_6">
+                <attribute name="title">
+                 <string>DRO</string>
+                </attribute>
+                <layout class="QHBoxLayout" name="horizontalLayout_6">
+                 <item>
+                  <widget class="QWidget" name="verticalWidget" native="true">
+                   <property name="minimumSize">
+                    <size>
+                     <width>325</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_9">
+                    <property name="spacing">
+                     <number>5</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>5</number>
+                    </property>
+                    <item>
+                     <widget class="QGroupBox" name="gridGroupBox">
+                      <property name="title">
+                       <string>Absolute Positions</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="page" stdset="0">
+                       <string>dro</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_3">
+                       <property name="spacing">
+                        <number>5</number>
+                       </property>
+                       <item row="0" column="1">
+                        <widget class="StatusLabel" name="statuslabel_5">
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                         <property name="rules" stdset="0">
+                          <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:abs?string&amp;axis=y&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Y\\n{}'.format(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0">
+                        <widget class="StatusLabel" name="statuslabel_4">
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                         <property name="rules" stdset="0">
+                          <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:abs?string&amp;axis=x&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'X\\n{}'.format(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="2">
+                        <widget class="StatusLabel" name="statuslabel_6">
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                         <property name="rules" stdset="0">
+                          <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:abs?string&amp;axis=z&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Z\\n{}'.format(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QGroupBox" name="gridGroupBox_2">
+                      <property name="title">
+                       <string>Relative Positions</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="page" stdset="0">
+                       <string>dro</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_4">
+                       <property name="spacing">
+                        <number>5</number>
+                       </property>
+                       <item row="0" column="1">
+                        <widget class="StatusLabel" name="statuslabel_7">
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                         <property name="rules" stdset="0">
+                          <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel?string&amp;axis=y&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Y\\n{}'.format(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0">
+                        <widget class="StatusLabel" name="statuslabel_8">
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                         <property name="rules" stdset="0">
+                          <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel?string&amp;axis=x&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'X\\n{}'.format(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="2">
+                        <widget class="StatusLabel" name="statuslabel_9">
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                         <property name="rules" stdset="0">
+                          <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel?string&amp;axis=z&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Z\\n{}'.format(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QGroupBox" name="gridGroupBox_3">
+                      <property name="title">
+                       <string>G5x Offsets</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="page" stdset="0">
+                       <string>dro</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_5">
+                       <property name="spacing">
+                        <number>5</number>
+                       </property>
+                       <item row="0" column="1">
+                        <widget class="StatusLabel" name="statuslabel_11">
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                         <property name="rules" stdset="0">
+                          <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'X\\n{:.4F}'.format(ch[0][0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="2">
+                        <widget class="StatusLabel" name="statuslabel_12">
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                         <property name="rules" stdset="0">
+                          <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Y\\n{:.4F}'.format(ch[0][1])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="3">
+                        <widget class="StatusLabel" name="statuslabel_17">
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                         <property name="rules" stdset="0">
+                          <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Z\\n{:.4F}'.format(ch[0][2])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0">
+                        <widget class="StatusLabel" name="statuslabel_16">
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                         <property name="rules" stdset="0">
+                          <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_index?string&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Current\\n{}'.format(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QGroupBox" name="gridGroupBox_4">
+                      <property name="title">
+                       <string>G92 Offsets</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="page" stdset="0">
+                       <string>dro</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_6">
+                       <property name="spacing">
+                        <number>5</number>
+                       </property>
+                       <item row="0" column="1">
+                        <widget class="StatusLabel" name="statuslabel_13">
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                         <property name="rules" stdset="0">
+                          <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g92_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Y\\n{:.4F}'.format(ch[0][1])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0">
+                        <widget class="StatusLabel" name="statuslabel_14">
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                         <property name="rules" stdset="0">
+                          <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g92_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'X\\n{:.4F}'.format(ch[0][0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="2">
+                        <widget class="StatusLabel" name="statuslabel_15">
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                         <property name="rules" stdset="0">
+                          <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g92_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Z\\n{:.4F}'.format(ch[0][2])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QGroupBox" name="gridGroupBox_5">
+                      <property name="title">
+                       <string>Tool Offsets</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="page" stdset="0">
+                       <string>dro</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_8">
+                       <property name="spacing">
+                        <number>5</number>
+                       </property>
+                       <item row="0" column="1">
+                        <widget class="StatusLabel" name="statuslabel_21">
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                         <property name="rules" stdset="0">
+                          <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:tool_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'X\\n{:.4F}'.format(ch[0][0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="2">
+                        <widget class="StatusLabel" name="statuslabel_22">
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                         <property name="rules" stdset="0">
+                          <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:tool_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Y\\n{:.4F}'.format(ch[0][1])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="3">
+                        <widget class="StatusLabel" name="statuslabel_23">
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                         <property name="rules" stdset="0">
+                          <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:tool_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Z\\n{:.4F}'.format(ch[0][2])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0">
+                        <widget class="StatusLabel" name="statuslabel_24">
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                         <property name="rules" stdset="0">
+                          <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:tool_in_spindle&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Current\\n{}'.format(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_4">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="tab">
+                <attribute name="title">
+                 <string>G code</string>
+                </attribute>
+                <layout class="QVBoxLayout" name="verticalLayout_8">
+                 <item>
+                  <widget class="GcodeEditor" name="gcodeeditor"/>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="tab_5">
+                <attribute name="title">
+                 <string>Errors</string>
+                </attribute>
+                <layout class="QVBoxLayout" name="verticalLayout_10">
+                 <item>
+                  <widget class="NotificationWidget" name="notificationwidget"/>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="tab_2">
+                <attribute name="title">
+                 <string>Files</string>
+                </attribute>
+                <layout class="QVBoxLayout" name="verticalLayout_7">
+                 <item>
+                  <widget class="QWidget" name="verticalWidget" native="true">
+                   <layout class="QVBoxLayout" name="verticalLayout_6">
+                    <property name="spacing">
+                     <number>5</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>5</number>
+                    </property>
+                    <item>
+                     <widget class="FileSystemTable" name="filesystemtable">
+                      <property name="hiddenColumns" stdset="0">
+                       <string>2</string>
+                      </property>
+                      <attribute name="horizontalHeaderCascadingSectionResizes">
+                       <bool>false</bool>
+                      </attribute>
+                      <attribute name="horizontalHeaderDefaultSectionSize">
+                       <number>150</number>
+                      </attribute>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="horizontalWidget" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_5">
+                       <property name="spacing">
+                        <number>5</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>5</number>
+                       </property>
+                       <item>
+                        <widget class="QPushButton" name="fileOpenParentBtn">
+                         <property name="text">
+                          <string>Open
+Paren
+Directory</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="fileOpenDirBtn">
+                         <property name="text">
+                          <string>Open
+Selected
+Directory</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="fileMoveUpBtn">
+                         <property name="text">
+                          <string>Move
+Up</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="fileMoveDownBtn">
+                         <property name="text">
+                          <string>Move
+Down</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="fileLoadBtn">
+                         <property name="text">
+                          <string>Load
+Selected
+File</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="horizontalWidget" native="true">
+               <layout class="QHBoxLayout" name="horizontalLayout_4">
+                <property name="spacing">
+                 <number>5</number>
+                </property>
+                <property name="leftMargin">
+                 <number>5</number>
+                </property>
+                <property name="topMargin">
+                 <number>5</number>
+                </property>
+                <property name="rightMargin">
+                 <number>5</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>5</number>
+                </property>
+                <item>
+                 <widget class="QGroupBox" name="gridGroupBox">
+                  <property name="title">
+                   <string>Jogging</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_2">
+                   <item row="0" column="0">
+                    <widget class="ActionButton" name="actionbutton_9">
+                     <property name="text">
+                      <string>X+</string>
+                     </property>
+                     <property name="actionName" stdset="0">
+                      <string>machine.jog.axis:x,pos</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="ActionButton" name="actionbutton_10">
+                     <property name="text">
+                      <string>Y+</string>
+                     </property>
+                     <property name="actionName" stdset="0">
+                      <string>machine.jog.axis:y,pos</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="ActionButton" name="actionbutton_11">
+                     <property name="text">
+                      <string>Z+</string>
+                     </property>
+                     <property name="actionName" stdset="0">
+                      <string>machine.jog.axis:z,pos</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="2">
+                    <widget class="ActionButton" name="actionbutton_12">
+                     <property name="text">
+                      <string>Z-</string>
+                     </property>
+                     <property name="actionName" stdset="0">
+                      <string>machine.jog.axis:z,neg</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="ActionButton" name="actionbutton_13">
+                     <property name="text">
+                      <string>Y-</string>
+                     </property>
+                     <property name="actionName" stdset="0">
+                      <string>machine.jog.axis:y,neg</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="ActionButton" name="actionbutton_14">
+                     <property name="text">
+                      <string>X-</string>
+                     </property>
+                     <property name="actionName" stdset="0">
+                      <string>machine.jog.axis:x,neg</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QGroupBox" name="gridGroupBox">
+                  <property name="title">
+                   <string>Overrides</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout">
+                   <property name="leftMargin">
+                    <number>5</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>5</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>5</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>5</number>
+                   </property>
+                   <property name="spacing">
+                    <number>5</number>
+                   </property>
+                   <item row="2" column="1">
+                    <widget class="StatusLabel" name="statuslabel_3">
+                     <property name="minimumSize">
+                      <size>
+                       <width>50</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                     <property name="rules" stdset="0">
+                      <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;settings:machine.jog.linear-speed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Jog\\n{:.0f} IPM'.format(ch[0])&quot;, &quot;name&quot;: &quot;Jog Rate&quot;}]</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="StatusLabel" name="statuslabel_2">
+                     <property name="minimumSize">
+                      <size>
+                       <width>50</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                     <property name="rules" stdset="0">
+                      <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:rapidrate&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Rapid\\n{:g}%'.format(ch[0]*100)&quot;, &quot;name&quot;: &quot;Rapid Rate&quot;}]</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="StatusLabel" name="statuslabel">
+                     <property name="minimumSize">
+                      <size>
+                       <width>50</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                     <property name="rules" stdset="0">
+                      <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:feedrate&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Feed\\n{:g}%'.format(ch[0]*100)&quot;, &quot;name&quot;: &quot;Feed Rate&quot;}]</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="ActionSlider" name="actionslider_2">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="actionName" stdset="0">
+                      <string>machine.rapid-override.set</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="ActionSlider" name="actionslider_3">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="actionName" stdset="0">
+                      <string>machine.feed-override.set</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="VCPSettingsSlider" name="settings_slider">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="settingName" stdset="0">
+                      <string>machine.jog.linear-speed</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="horizontalWidget" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="spacing">
+           <number>5</number>
+          </property>
+          <property name="leftMargin">
+           <number>5</number>
+          </property>
+          <property name="topMargin">
+           <number>5</number>
+          </property>
+          <property name="rightMargin">
+           <number>5</number>
+          </property>
+          <property name="bottomMargin">
+           <number>5</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="exitAppBtn">
+            <property name="text">
+             <string>Exit
+GUI</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="ActionButton" name="actionbutton_3">
+            <property name="text">
+             <string>E Stop</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="actionName" stdset="0">
+             <string>machine.estop.toggle</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="ActionButton" name="actionbutton_2">
+            <property name="text">
+             <string>Power</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="actionName" stdset="0">
+             <string>machine.power.toggle</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="ActionButton" name="actionbutton">
+            <property name="text">
+             <string>Home
+All</string>
+            </property>
+            <property name="rules" stdset="0">
+             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Homed' if ch[0] else 'Home\\nAll'&quot;, &quot;name&quot;: &quot;Button Text&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #00EE00' if ch[0] else ''&quot;, &quot;name&quot;: &quot;Indicator&quot;}]</string>
+            </property>
+            <property name="actionName" stdset="0">
+             <string>machine.home.all</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="HalButton" name="probe_sim">
+            <property name="text">
+             <string>Probe
+Trip</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="MDIButton" name="mdibutton">
+            <property name="text">
+             <string>Rapid
+Home</string>
+            </property>
+            <property name="MDICommand" stdset="0">
+             <string>G53 G0 X0 Y0 Z0</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="MDIButton" name="mdibutton_2">
+            <property name="text">
+             <string>Set
+XY
+0.0</string>
+            </property>
+            <property name="MDICommand" stdset="0">
+             <string>G10 L20 P0 X0.0 Y0.0</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="SubCallButton" name="subcallbutton">
+            <property name="text">
+             <string>Clear
+Offsets</string>
+            </property>
+            <property name="filename" stdset="0">
+             <string>clear-offsets.ngc</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="ActionButton" name="actionbutton_8">
+            <property name="text">
+             <string>Program
+Run</string>
+            </property>
+            <property name="actionName" stdset="0">
+             <string>program.run</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="ActionButton" name="actionbutton_7">
+            <property name="text">
+             <string>Single
+Step</string>
+            </property>
+            <property name="actionName" stdset="0">
+             <string>program.step</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="ActionButton" name="actionbutton_5">
+            <property name="text">
+             <string>Pause
+Program</string>
+            </property>
+            <property name="actionName" stdset="0">
+             <string>program.pause</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="ActionButton" name="actionbutton_6">
+            <property name="text">
+             <string>Resume
+Program</string>
+            </property>
+            <property name="actionName" stdset="0">
+             <string>program.resume</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="ActionButton" name="actionbutton_4">
+            <property name="text">
+             <string>Abort
+Program</string>
+            </property>
+            <property name="actionName" stdset="0">
+             <string>program.abort</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionOPEN">
+   <property name="text">
+    <string>oPEN</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionFullscreen">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Fullscreen</string>
+   </property>
+   <property name="shortcut">
+    <string>F11</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>FileSystemTable</class>
+   <extends>QTableView</extends>
+   <header>qtpyvcp.widgets.input_widgets.file_system</header>
+  </customwidget>
+  <customwidget>
+   <class>ActionSlider</class>
+   <extends>QSlider</extends>
+   <header>qtpyvcp.widgets.input_widgets.action_slider</header>
+  </customwidget>
+  <customwidget>
+   <class>HalButton</class>
+   <extends>QPushButton</extends>
+   <header>qtpyvcp.widgets.hal_widgets.hal_button</header>
+  </customwidget>
+  <customwidget>
+   <class>StatusLabel</class>
+   <extends>QLabel</extends>
+   <header>qtpyvcp.widgets.display_widgets.status_label</header>
+  </customwidget>
+  <customwidget>
+   <class>SubCallButton</class>
+   <extends>QPushButton</extends>
+   <header>qtpyvcp.widgets.button_widgets.subcall_button</header>
+  </customwidget>
+  <customwidget>
+   <class>VCPSettingsSlider</class>
+   <extends>QSlider</extends>
+   <header>qtpyvcp.widgets.input_widgets.setting_slider</header>
+  </customwidget>
+  <customwidget>
+   <class>MDIButton</class>
+   <extends>QPushButton</extends>
+   <header>qtpyvcp.widgets.button_widgets.mdi_button</header>
+  </customwidget>
+  <customwidget>
+   <class>GcodeEditor</class>
+   <extends>QFrame</extends>
+   <header>qtpyvcp.widgets.input_widgets.gcode_editor</header>
+  </customwidget>
+  <customwidget>
+   <class>VTKBackPlot</class>
+   <extends>QWidget</extends>
+   <header>qtpyvcp.widgets.display_widgets.vtk_backplot.vtk_backplot</header>
+  </customwidget>
+  <customwidget>
+   <class>ActionButton</class>
+   <extends>QPushButton</extends>
+   <header>qtpyvcp.widgets.button_widgets.action_button</header>
+  </customwidget>
+  <customwidget>
+   <class>NotificationWidget</class>
+   <extends>QWidget</extends>
+   <header>qtpyvcp.widgets.display_widgets.notification_widget</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>fileOpenParentBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>filesystemtable</receiver>
+   <slot>viewParentDirectory()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>743</x>
+     <y>449</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>927</x>
+     <y>226</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fileOpenDirBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>filesystemtable</receiver>
+   <slot>openSelectedItem()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>835</x>
+     <y>449</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>927</x>
+     <y>226</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fileMoveUpBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>filesystemtable</receiver>
+   <slot>selectPrevious()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>927</x>
+     <y>449</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>927</x>
+     <y>226</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fileMoveDownBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>filesystemtable</receiver>
+   <slot>selectNext()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1019</x>
+     <y>449</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>927</x>
+     <y>226</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fileLoadBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>filesystemtable</receiver>
+   <slot>loadSelectedFile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1111</x>
+     <y>449</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>927</x>
+     <y>226</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>viewP</sender>
+   <signal>clicked()</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>setViewP()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>70</x>
+     <y>623</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>343</x>
+     <y>312</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>viewX</sender>
+   <signal>clicked()</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>setViewX()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>129</x>
+     <y>623</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>343</x>
+     <y>312</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>viewY</sender>
+   <signal>clicked()</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>setViewY()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>188</x>
+     <y>623</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>343</x>
+     <y>312</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>viewZ</sender>
+   <signal>clicked()</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>setViewZ()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>247</x>
+     <y>623</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>343</x>
+     <y>312</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>viewZ2</sender>
+   <signal>clicked()</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>setViewZ2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>306</x>
+     <y>623</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>343</x>
+     <y>312</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>viewPlus</sender>
+   <signal>clicked()</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>zoomIn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>498</x>
+     <y>623</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>343</x>
+     <y>312</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>viewMinus</sender>
+   <signal>clicked()</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>zoomOut()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>557</x>
+     <y>623</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>343</x>
+     <y>312</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>viewClear</sender>
+   <signal>clicked()</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>clearLivePlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>616</x>
+     <y>623</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>343</x>
+     <y>312</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <buttongroups>
+  <buttongroup name="viewBtnGrp"/>
+ </buttongroups>
+</ui>

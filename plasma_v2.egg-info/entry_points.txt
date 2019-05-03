@@ -1,0 +1,6 @@
+[gui_scripts]
+plasma_v2 = plasma_v2:main
+
+[qtpyvcp.vcp]
+plasma_v2 = plasma_v2
+
