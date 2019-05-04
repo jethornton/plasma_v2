@@ -241,7 +241,7 @@
                 <enum>QTabWidget::South</enum>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>4</number>
                </property>
                <widget class="QWidget" name="tab_6">
                 <attribute name="title">
@@ -665,6 +665,259 @@ Down</string>
 Selected
 File</string>
                          </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="tab_7">
+                <attribute name="title">
+                 <string>Parts</string>
+                </attribute>
+                <layout class="QVBoxLayout" name="verticalLayout_12">
+                 <item>
+                  <widget class="QWidget" name="verticalWidget" native="true">
+                   <layout class="QVBoxLayout" name="verticalLayout_11">
+                    <property name="spacing">
+                     <number>5</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>5</number>
+                    </property>
+                    <item>
+                     <widget class="QTreeView" name="subTreeView"/>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="selectedFileLbl">
+                      <property name="frameShape">
+                       <enum>QFrame::Box</enum>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="horizontalWidget" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_7">
+                       <property name="spacing">
+                        <number>5</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>5</number>
+                       </property>
+                       <item>
+                        <widget class="QGroupBox" name="gridGroupBox">
+                         <property name="title">
+                          <string>Multiple Parts</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                         <layout class="QGridLayout" name="gridLayout_7">
+                          <property name="leftMargin">
+                           <number>5</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>1</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>5</number>
+                          </property>
+                          <property name="bottomMargin">
+                           <number>1</number>
+                          </property>
+                          <property name="spacing">
+                           <number>5</number>
+                          </property>
+                          <item row="3" column="0">
+                           <widget class="QLabel" name="label_3">
+                            <property name="text">
+                             <string>X Rotation</string>
+                            </property>
+                            <property name="alignment">
+                             <set>Qt::AlignCenter</set>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="2" column="2">
+                           <widget class="QLabel" name="label_5">
+                            <property name="text">
+                             <string>Y Spacing</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="2" column="1">
+                           <widget class="QDoubleSpinBox" name="xPartsSpacingSb">
+                            <property name="decimals">
+                             <number>3</number>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="3" column="1">
+                           <widget class="QDoubleSpinBox" name="xPartRotationSb">
+                            <property name="decimals">
+                             <number>3</number>
+                            </property>
+                            <property name="maximum">
+                             <double>360.000000000000000</double>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="0" column="3">
+                           <widget class="QSpinBox" name="yPartsCountSb">
+                            <property name="minimum">
+                             <number>1</number>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="0" column="2">
+                           <widget class="QLabel" name="label_2">
+                            <property name="text">
+                             <string>Y Count</string>
+                            </property>
+                            <property name="alignment">
+                             <set>Qt::AlignCenter</set>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="2" column="3">
+                           <widget class="QDoubleSpinBox" name="yPartsSpacingSb">
+                            <property name="decimals">
+                             <number>3</number>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="3" column="2">
+                           <widget class="QLabel" name="label_6">
+                            <property name="text">
+                             <string>Y Rotation</string>
+                            </property>
+                            <property name="alignment">
+                             <set>Qt::AlignCenter</set>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="3" column="3">
+                           <widget class="QDoubleSpinBox" name="yPartRotationSb">
+                            <property name="decimals">
+                             <number>3</number>
+                            </property>
+                            <property name="maximum">
+                             <double>360.000000000000000</double>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="0" column="1">
+                           <widget class="QSpinBox" name="xPartsCountSb">
+                            <property name="minimum">
+                             <number>1</number>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="2" column="0">
+                           <widget class="QLabel" name="label_4">
+                            <property name="text">
+                             <string>X Spacing</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="0" column="0">
+                           <widget class="QLabel" name="label">
+                            <property name="text">
+                             <string>X Count</string>
+                            </property>
+                            <property name="alignment">
+                             <set>Qt::AlignCenter</set>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="4" column="2">
+                           <widget class="QLabel" name="label_7">
+                            <property name="text">
+                             <string>X Offset</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="4" column="3">
+                           <widget class="QDoubleSpinBox" name="xEvenOffsetSb"/>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="horizontalSpacer_5">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item>
+                        <widget class="QGroupBox" name="gridGroupBox">
+                         <property name="title">
+                          <string>Build Tools</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                         <layout class="QGridLayout" name="gridLayout_9">
+                          <property name="leftMargin">
+                           <number>5</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>5</number>
+                          </property>
+                          <property name="spacing">
+                           <number>5</number>
+                          </property>
+                          <item row="1" column="1">
+                           <widget class="QPushButton" name="partsBuildLoadBtn">
+                            <property name="text">
+                             <string>Build
+and
+Load</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="1" column="0">
+                           <widget class="QPushButton" name="partsBuildSaveBtn">
+                            <property name="text">
+                             <string>Build
+and
+Save</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
                         </widget>
                        </item>
                       </layout>
