@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
+    <width>1244</width>
     <height>811</height>
    </rect>
   </property>
@@ -241,7 +241,7 @@
                 <enum>QTabWidget::South</enum>
                </property>
                <property name="currentIndex">
-                <number>4</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="tab_6">
                 <attribute name="title">
@@ -712,6 +712,9 @@ File</string>
                   </property>
                   <item row="1" column="1">
                    <widget class="QPushButton" name="nozzleFwdBtn">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
                     <property name="text">
                      <string>Fwd</string>
                     </property>
@@ -719,6 +722,9 @@ File</string>
                   </item>
                   <item row="1" column="0">
                    <widget class="QPushButton" name="nozzleBackBtn">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
                     <property name="text">
                      <string>Back</string>
                     </property>
@@ -871,6 +877,9 @@ File</string>
                   </property>
                   <item row="1" column="1">
                    <widget class="QPushButton" name="ampsFwdBtn">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
                     <property name="text">
                      <string>Fwd</string>
                     </property>
@@ -878,13 +887,20 @@ File</string>
                   </item>
                   <item row="1" column="0">
                    <widget class="QPushButton" name="ampsBackBtn">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
                     <property name="text">
                      <string>Back</string>
                     </property>
                    </widget>
                   </item>
                   <item row="0" column="0" colspan="2">
-                   <widget class="QLineEdit" name="ampsLbl"/>
+                   <widget class="QLineEdit" name="ampsLbl">
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
                   </item>
                  </layout>
                 </widget>
@@ -1186,6 +1202,29 @@ File</string>
                           </item>
                           <item row="4" column="3">
                            <widget class="QDoubleSpinBox" name="xEvenOffsetSb"/>
+                          </item>
+                          <item row="4" column="0">
+                           <widget class="QRadioButton" name="partsTestRb">
+                            <property name="text">
+                             <string>Test</string>
+                            </property>
+                            <property name="checked">
+                             <bool>true</bool>
+                            </property>
+                            <attribute name="buttonGroup">
+                             <string notr="true">partsBtnGrp</string>
+                            </attribute>
+                           </widget>
+                          </item>
+                          <item row="4" column="1">
+                           <widget class="QRadioButton" name="partsCutRb">
+                            <property name="text">
+                             <string>Cut</string>
+                            </property>
+                            <attribute name="buttonGroup">
+                             <string notr="true">partsBtnGrp</string>
+                            </attribute>
+                           </widget>
                           </item>
                          </layout>
                         </widget>
@@ -1963,5 +2002,6 @@ Program</string>
  </connections>
  <buttongroups>
   <buttongroup name="viewBtnGrp"/>
+  <buttongroup name="partsBtnGrp"/>
  </buttongroups>
 </ui>

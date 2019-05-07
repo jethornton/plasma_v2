@@ -30,6 +30,11 @@ def onClicked(parent, index):
   parent.statusbar.clearMessage()
 
 def nestedParts(parent):
+  if parent.selectedFileLbl.text():
+    parent.statusbar.showMessage('Using {}'.format(parent.selectedFileLbl.text()))
+  else:
+    parent.statusbar.showMessage('A Subroutine File must be selected')
+    return
   xCount = parent.xPartsCountSb.value()
   xSpacing = parent.xPartsSpacingSb.value()
   xRotation = parent.xPartRotationSb.value()
@@ -50,7 +55,10 @@ def nestedParts(parent):
       itemCount = sub.count(i)
       for x in range(itemCount):
         del sub[sub.index(i)]
-  sub.append('F75') # for testing
+  if parent.partsTestRb.isChecked():
+    sub.append('F75') # for testing
+  else:
+    sub.append('F{}'.format(parent.cutSpeedLbl.text()))
   sub.append('#<xStart> = [#5221 + #5420]') # get current absolute X position
   sub.append('G10 L20 P0 X0 Y0') # set current point as X0 Y0
 
