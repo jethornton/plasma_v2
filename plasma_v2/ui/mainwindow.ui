@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1244</width>
+    <width>1248</width>
     <height>811</height>
    </rect>
   </property>
@@ -568,6 +568,52 @@
                     </item>
                     <item>
                      <widget class="QWidget" name="horizontalWidget" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_9">
+                       <property name="spacing">
+                        <number>5</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>5</number>
+                       </property>
+                       <item>
+                        <widget class="MDIButton" name="mdibutton_4"/>
+                       </item>
+                       <item>
+                        <widget class="MDIButton" name="mdibutton_3">
+                         <property name="text">
+                          <string>Clear
+G54</string>
+                         </property>
+                         <property name="MDICommand" stdset="0">
+                          <string>G10 L2 P1 X0 Y0 Z0 R0</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="MDIButton" name="mdibutton_5">
+                         <property name="text">
+                          <string>Clear
+G92</string>
+                         </property>
+                         <property name="MDICommand" stdset="0">
+                          <string>G92.1</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="horizontalWidget" native="true">
                       <layout class="QHBoxLayout" name="horizontalLayout_8">
                        <property name="spacing">
                         <number>5</number>
@@ -637,6 +683,40 @@ Mode</string>
                           <string notr="true">modeBtnGrp</string>
                          </attribute>
                         </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="horizontalWidget" native="true">
+                      <layout class="QVBoxLayout" name="verticalLayout_14">
+                       <property name="spacing">
+                        <number>5</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>5</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_11">
+                         <property name="text">
+                          <string>MDI Entry</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="MDIEntry" name="mdientry_2"/>
                        </item>
                       </layout>
                      </widget>
@@ -2137,8 +2217,8 @@ Program</string>
   </connection>
  </connections>
  <buttongroups>
-  <buttongroup name="viewBtnGrp"/>
   <buttongroup name="partsBtnGrp"/>
   <buttongroup name="modeBtnGrp"/>
+  <buttongroup name="viewBtnGrp"/>
  </buttongroups>
 </ui>
