@@ -532,6 +532,16 @@
                       </layout>
                      </widget>
                     </item>
+                    <item>
+                     <widget class="StatusLabel" name="statuslabel_10">
+                      <property name="frameShape">
+                       <enum>QFrame::Box</enum>
+                      </property>
+                      <property name="rules" stdset="0">
+                       <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:interpreter_errcode?string&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                      </property>
+                     </widget>
+                    </item>
                    </layout>
                   </widget>
                  </item>
@@ -730,16 +740,6 @@ Mode</string>
                 <attribute name="title">
                  <string>Page</string>
                 </attribute>
-                <widget class="MDIEntry" name="mdientry">
-                 <property name="geometry">
-                  <rect>
-                   <x>105</x>
-                   <y>325</y>
-                   <width>266</width>
-                   <height>23</height>
-                  </rect>
-                 </property>
-                </widget>
                </widget>
                <widget class="QWidget" name="tab">
                 <attribute name="title">
