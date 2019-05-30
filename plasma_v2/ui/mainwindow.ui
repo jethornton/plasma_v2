@@ -536,19 +536,130 @@
                   </widget>
                  </item>
                  <item>
-                  <spacer name="horizontalSpacer_4">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
+                  <widget class="QWidget" name="verticalWidget" native="true">
+                   <layout class="QVBoxLayout" name="verticalLayout_13">
+                    <property name="spacing">
+                     <number>5</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>5</number>
+                    </property>
+                    <item>
+                     <spacer name="verticalSpacer">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="horizontalWidget" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_8">
+                       <property name="spacing">
+                        <number>5</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>5</number>
+                       </property>
+                       <item>
+                        <widget class="ActionButton" name="actionbutton_18">
+                         <property name="text">
+                          <string>Auto
+Mode</string>
+                         </property>
+                         <property name="checkable">
+                          <bool>true</bool>
+                         </property>
+                         <property name="rules" stdset="0">
+                          <string>[]</string>
+                         </property>
+                         <property name="actionName" stdset="0">
+                          <string>machine.mode.auto</string>
+                         </property>
+                         <attribute name="buttonGroup">
+                          <string notr="true">modeBtnGrp</string>
+                         </attribute>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="ActionButton" name="actionbutton_19">
+                         <property name="text">
+                          <string>Manual
+Mode</string>
+                         </property>
+                         <property name="checkable">
+                          <bool>true</bool>
+                         </property>
+                         <property name="actionName" stdset="0">
+                          <string>machine.mode.manual</string>
+                         </property>
+                         <attribute name="buttonGroup">
+                          <string notr="true">modeBtnGrp</string>
+                         </attribute>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="ActionButton" name="actionbutton_17">
+                         <property name="text">
+                          <string>MDI
+Mode</string>
+                         </property>
+                         <property name="checkable">
+                          <bool>true</bool>
+                         </property>
+                         <property name="actionName" stdset="0">
+                          <string>machine.mode.mdi</string>
+                         </property>
+                         <attribute name="buttonGroup">
+                          <string notr="true">modeBtnGrp</string>
+                         </attribute>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
                  </item>
                 </layout>
+               </widget>
+               <widget class="QWidget" name="tab_9">
+                <attribute name="title">
+                 <string>Page</string>
+                </attribute>
+                <widget class="MDIEntry" name="mdientry">
+                 <property name="geometry">
+                  <rect>
+                   <x>105</x>
+                   <y>325</y>
+                   <width>266</width>
+                   <height>23</height>
+                  </rect>
+                 </property>
+                </widget>
                </widget>
                <widget class="QWidget" name="tab">
                 <attribute name="title">
@@ -744,8 +855,8 @@ File</string>
                   <rect>
                    <x>320</x>
                    <y>65</y>
-                   <width>176</width>
-                   <height>171</height>
+                   <width>186</width>
+                   <height>216</height>
                   </rect>
                  </property>
                  <property name="title">
@@ -779,21 +890,21 @@ File</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="5" column="0">
+                  <item row="6" column="0">
                    <widget class="QLabel" name="label_25">
                     <property name="text">
                      <string>Kerf Width</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="4" column="0">
+                  <item row="5" column="0">
                    <widget class="QLabel" name="label_23">
                     <property name="text">
                      <string>Cut Speed</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="3" column="0">
+                  <item row="4" column="0">
                    <widget class="QLabel" name="label_12">
                     <property name="text">
                      <string>Pierce Delay</string>
@@ -821,22 +932,36 @@ File</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="3" column="1">
-                   <widget class="QLineEdit" name="cutDelayLbl">
-                    <property name="alignment">
-                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                    </property>
-                   </widget>
-                  </item>
                   <item row="4" column="1">
-                   <widget class="QLineEdit" name="cutSpeedLbl">
+                   <widget class="QLineEdit" name="pierceDelayLbl">
                     <property name="alignment">
                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                     </property>
                    </widget>
                   </item>
                   <item row="5" column="1">
+                   <widget class="QLineEdit" name="cutSpeedLbl">
+                    <property name="alignment">
+                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="1">
                    <widget class="QLineEdit" name="cutWidthLbl">
+                    <property name="alignment">
+                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="0">
+                   <widget class="QLabel" name="label_13">
+                    <property name="text">
+                     <string>Pierce Height</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="1">
+                   <widget class="QLineEdit" name="pierceHeightLbl">
                     <property name="alignment">
                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                     </property>
@@ -1581,6 +1706,16 @@ All</string>
            </spacer>
           </item>
           <item>
+           <widget class="ActionButton" name="actionbutton_15">
+            <property name="text">
+             <string>TEST</string>
+            </property>
+            <property name="actionName" stdset="0">
+             <string>machine-actions.issue-mdi:G0X2 \n G0Y2</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="HalButton" name="probe_sim">
             <property name="text">
              <string>Probe
@@ -1595,7 +1730,7 @@ Trip</string>
 Home</string>
             </property>
             <property name="MDICommand" stdset="0">
-             <string>G53 G0 X0 Y0 Z0</string>
+             <string>G53 G0 Z0;G53 G0 X0 Y0</string>
             </property>
            </widget>
           </item>
@@ -1612,13 +1747,14 @@ XY
            </widget>
           </item>
           <item>
-           <widget class="SubCallButton" name="subcallbutton">
+           <widget class="ActionButton" name="actionbutton_16">
             <property name="text">
-             <string>Clear
-Offsets</string>
+             <string>Set
+XYZ
+to 0</string>
             </property>
-            <property name="filename" stdset="0">
-             <string>clear-offsets.ngc</string>
+            <property name="actionName" stdset="0">
+             <string>machine-actions.issue-mdi:G10L2P0X0Y0Z0</string>
             </property>
            </widget>
           </item>
@@ -1739,6 +1875,11 @@ Program</string>
    <header>qtpyvcp.widgets.input_widgets.file_system</header>
   </customwidget>
   <customwidget>
+   <class>MDIEntry</class>
+   <extends>QLineEdit</extends>
+   <header>qtpyvcp.widgets.input_widgets.mdientry_widget</header>
+  </customwidget>
+  <customwidget>
    <class>ActionSlider</class>
    <extends>QSlider</extends>
    <header>qtpyvcp.widgets.input_widgets.action_slider</header>
@@ -1752,11 +1893,6 @@ Program</string>
    <class>StatusLabel</class>
    <extends>QLabel</extends>
    <header>qtpyvcp.widgets.display_widgets.status_label</header>
-  </customwidget>
-  <customwidget>
-   <class>SubCallButton</class>
-   <extends>QPushButton</extends>
-   <header>qtpyvcp.widgets.button_widgets.subcall_button</header>
   </customwidget>
   <customwidget>
    <class>VCPSettingsSlider</class>
@@ -2003,5 +2139,6 @@ Program</string>
  <buttongroups>
   <buttongroup name="viewBtnGrp"/>
   <buttongroup name="partsBtnGrp"/>
+  <buttongroup name="modeBtnGrp"/>
  </buttongroups>
 </ui>

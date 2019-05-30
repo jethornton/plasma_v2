@@ -151,18 +151,19 @@ def nozzleInfo(parent):
     nozzle = parent.nozzleLbl.text()
     amps = parent.ampsLbl.text()
 
-    nozzleInfoSelect = "SELECT voltage, amps, height, delay, speed, kerf FROM \
-    cut_chart WHERE material = '{}' AND gauge = '{}' AND nozzle = '{}' AND \
-    amps = '{}' ".format(material, gauge, nozzle, amps)
+    nozzleInfoSelect = "SELECT voltage, amps, c_height, p_height, p_delay, \
+    speed, kerf FROM cut_chart WHERE material = '{}' AND gauge = '{}' AND \
+    nozzle = '{}' AND amps = '{}' ".format(material, gauge, nozzle, amps)
 
     parent.nozzleInfoModel.setQuery(nozzleInfoSelect)
     parent.nozzleInfoMapper.setModel(parent.nozzleInfoModel)
     parent.nozzleInfoMapper.addMapping(parent.cutVoltsLbl, 0, b'text')
     parent.nozzleInfoMapper.addMapping(parent.cutAmpsLbl, 1, b'text')
     parent.nozzleInfoMapper.addMapping(parent.cutHeightLbl, 2, b'text')
-    parent.nozzleInfoMapper.addMapping(parent.cutDelayLbl, 3, b'text')
-    parent.nozzleInfoMapper.addMapping(parent.cutSpeedLbl, 4, b'text')
-    parent.nozzleInfoMapper.addMapping(parent.cutWidthLbl, 5, b'text')
+    parent.nozzleInfoMapper.addMapping(parent.pierceHeightLbl, 3, b'text')
+    parent.nozzleInfoMapper.addMapping(parent.pierceDelayLbl, 4, b'text')
+    parent.nozzleInfoMapper.addMapping(parent.cutSpeedLbl, 5, b'text')
+    parent.nozzleInfoMapper.addMapping(parent.cutWidthLbl, 6, b'text')
     parent.nozzleInfoMapper.toFirst()
 
 

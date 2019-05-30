@@ -88,6 +88,15 @@ def nestedParts(parent):
         sub.append('G90')
       sub.append('G10 L20 P0 X0')
       sub.append('G10 L2 P0 R{}'.format(rotation))
+      if parent.partsTestRb.isChecked():
+        sub.append('; Test Run no Plasma') # for testing
+      else:
+        pierceHeight = parent.pierceDelayLbl.text()
+        pierceDelay = parent.pierceDelayLbl.text()
+        cutHeight = parent.cutHeightLbl.text()
+        sub.append('o<torch-probe> call [{}] [{}] [{}]'.format \
+        (pierceHeight,pierceDelay,cutHeight))
+
       sub.append('{} call'.format(subName))
 
 
