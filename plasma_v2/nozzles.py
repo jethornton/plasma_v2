@@ -3,7 +3,7 @@ from functools import partial
 from PyQt5.QtSql import QSqlQueryModel, QSqlQuery
 from PyQt5.QtWidgets import QDataWidgetMapper
 
-def Setup(parent):
+def initNozzles(parent):
     parent.materialFwdBtn.clicked.connect(partial(materialFwd, parent))
     parent.materialBackBtn.clicked.connect(partial(materialBack, parent))
     parent.gaugeFwdBtn.clicked.connect(partial(gaugeFwd, parent))

@@ -6,7 +6,7 @@ import os, time
 
 HOME = os.path.expanduser("~")
 
-def initPartNest(parent):
+def initNest(parent):
   parent.subModel = QFileSystemModel()
   parent.subModel.setRootPath('')
   parent.subTreeView.setModel(parent.subModel)
@@ -71,6 +71,8 @@ def nestedParts(parent):
     else:
       rotation = xRotation
       offset = 0
+    if parent.partsZcb.isChecked():
+      sub.append('G53 G0 Z0')
     if i > 0: # move to next position
       sub.append('G10 L2 P0 X0 R0')
       sub.append('G0 X[#<xStart> + {}]'.format(offset))
@@ -82,6 +84,9 @@ def nestedParts(parent):
     for i in range(xCount):
       sub.append('; X Col {}'.format(i))
       if i > 0: # move to next position
+        if parent.partsZcb.isChecked():
+          sub.append('G53 G0 Z0')
+        sub.append('G0 X0 Y0')
         sub.append('G91')
         sub.append('G10 L2 P0 R0')
         sub.append('G0 X{}'.format(xSpacing))
@@ -90,6 +95,8 @@ def nestedParts(parent):
       sub.append('G10 L2 P0 R{}'.format(rotation))
       if parent.partsTestRb.isChecked():
         sub.append('; Test Run no Plasma') # for testing
+        testZ = str(parent.partTestZ.value())
+        sub.append('G1 Z{}'.format(testZ)) # z test height
       else:
         pierceHeight = parent.pierceDelayLbl.text()
         pierceDelay = parent.pierceDelayLbl.text()
@@ -101,6 +108,7 @@ def nestedParts(parent):
 
 
   sub.append('G10 L2 P0 X0 Y0')
+  sub.append('G53 G0 Z0')
   sub.append('M2')
 
   buildLoad(parent, sub)

@@ -65,11 +65,14 @@
               <height>0</height>
              </size>
             </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
             <property name="tabPosition">
              <enum>QTabWidget::South</enum>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="tab_3">
              <attribute name="title">
@@ -237,11 +240,14 @@
              </property>
              <item>
               <widget class="QTabWidget" name="tabWidget_2">
+               <property name="focusPolicy">
+                <enum>Qt::NoFocus</enum>
+               </property>
                <property name="tabPosition">
                 <enum>QTabWidget::South</enum>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>7</number>
                </property>
                <widget class="QWidget" name="tab_6">
                 <attribute name="title">
@@ -533,13 +539,54 @@
                      </widget>
                     </item>
                     <item>
-                     <widget class="StatusLabel" name="statuslabel_10">
-                      <property name="frameShape">
-                       <enum>QFrame::Box</enum>
-                      </property>
-                      <property name="rules" stdset="0">
-                       <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:interpreter_errcode?string&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
-                      </property>
+                     <widget class="QWidget" name="horizontalWidget" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_10">
+                       <property name="spacing">
+                        <number>5</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>5</number>
+                       </property>
+                       <item>
+                        <widget class="StatusLabel" name="statuslabel_10">
+                         <property name="frameShape">
+                          <enum>QFrame::Box</enum>
+                         </property>
+                         <property name="rules" stdset="0">
+                          <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:interpreter_errcode?string&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="horizontalSpacer_6">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item>
+                        <widget class="StatusLED" name="statusled">
+                         <property name="rules" stdset="0">
+                          <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:inpos&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;On&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
                      </widget>
                     </item>
                    </layout>
@@ -1220,7 +1267,7 @@ File</string>
                </widget>
                <widget class="QWidget" name="tab_7">
                 <attribute name="title">
-                 <string>Parts</string>
+                 <string>Nest</string>
                 </attribute>
                 <layout class="QVBoxLayout" name="verticalLayout_12">
                  <item>
@@ -1435,6 +1482,77 @@ File</string>
                         </widget>
                        </item>
                        <item>
+                        <widget class="QGroupBox" name="gridGroupBox">
+                         <property name="title">
+                          <string>Options</string>
+                         </property>
+                         <layout class="QGridLayout" name="gridLayout_11">
+                          <property name="leftMargin">
+                           <number>5</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>5</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>5</number>
+                          </property>
+                          <property name="bottomMargin">
+                           <number>5</number>
+                          </property>
+                          <property name="spacing">
+                           <number>5</number>
+                          </property>
+                          <item row="0" column="0">
+                           <widget class="QLabel" name="label_26">
+                            <property name="text">
+                             <string>Test Z</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="3" column="0">
+                           <widget class="QLabel" name="label_24">
+                            <property name="text">
+                             <string>Feed</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="4" column="0">
+                           <widget class="QDoubleSpinBox" name="doubleSpinBox">
+                            <property name="decimals">
+                             <number>1</number>
+                            </property>
+                            <property name="maximum">
+                             <double>500.000000000000000</double>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="2" column="0">
+                           <widget class="QCheckBox" name="partsZcb">
+                            <property name="text">
+                             <string>G53Z0</string>
+                            </property>
+                            <property name="checked">
+                             <bool>true</bool>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="1" column="0">
+                           <widget class="QDoubleSpinBox" name="partTestZ">
+                            <property name="decimals">
+                             <number>3</number>
+                            </property>
+                            <property name="minimum">
+                             <double>-5.000000000000000</double>
+                            </property>
+                            <property name="maximum">
+                             <double>0.250000000000000</double>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
                         <spacer name="horizontalSpacer_5">
                          <property name="orientation">
                           <enum>Qt::Horizontal</enum>
@@ -1450,7 +1568,7 @@ File</string>
                        <item>
                         <widget class="QGroupBox" name="gridGroupBox">
                          <property name="title">
-                          <string>Build Tools</string>
+                          <string>Build</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignCenter</set>
@@ -1465,21 +1583,21 @@ File</string>
                           <property name="spacing">
                            <number>5</number>
                           </property>
-                          <item row="1" column="1">
-                           <widget class="QPushButton" name="partsBuildLoadBtn">
-                            <property name="text">
-                             <string>Build
-and
-Load</string>
-                            </property>
-                           </widget>
-                          </item>
                           <item row="1" column="0">
                            <widget class="QPushButton" name="partsBuildSaveBtn">
                             <property name="text">
                              <string>Build
 and
 Save</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="0" column="0">
+                           <widget class="QPushButton" name="partsBuildLoadBtn">
+                            <property name="text">
+                             <string>Build
+and
+Load</string>
                             </property>
                            </widget>
                           </item>
@@ -1490,6 +1608,275 @@ Save</string>
                      </widget>
                     </item>
                    </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="tab_10">
+                <attribute name="title">
+                 <string>Part</string>
+                </attribute>
+                <layout class="QVBoxLayout" name="verticalLayout_16">
+                 <item>
+                  <widget class="QTabWidget" name="tabWidget_3">
+                   <property name="tabPosition">
+                    <enum>QTabWidget::East</enum>
+                   </property>
+                   <property name="tabShape">
+                    <enum>QTabWidget::Triangular</enum>
+                   </property>
+                   <property name="currentIndex">
+                    <number>0</number>
+                   </property>
+                   <widget class="QWidget" name="tab_11">
+                    <attribute name="title">
+                     <string>Square</string>
+                    </attribute>
+                    <layout class="QVBoxLayout" name="verticalLayout_17">
+                     <item>
+                      <widget class="QWidget" name="verticalWidget" native="true">
+                       <layout class="QVBoxLayout" name="verticalLayout_15">
+                        <property name="spacing">
+                         <number>5</number>
+                        </property>
+                        <property name="leftMargin">
+                         <number>5</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>5</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>5</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>5</number>
+                        </property>
+                        <item>
+                         <spacer name="verticalSpacer_2">
+                          <property name="orientation">
+                           <enum>Qt::Vertical</enum>
+                          </property>
+                          <property name="sizeHint" stdset="0">
+                           <size>
+                            <width>20</width>
+                            <height>40</height>
+                           </size>
+                          </property>
+                         </spacer>
+                        </item>
+                        <item>
+                         <widget class="QWidget" name="gridWidget" native="true">
+                          <layout class="QGridLayout" name="gridLayout_10">
+                           <property name="leftMargin">
+                            <number>5</number>
+                           </property>
+                           <property name="topMargin">
+                            <number>5</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>5</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>5</number>
+                           </property>
+                           <property name="spacing">
+                            <number>5</number>
+                           </property>
+                           <item row="2" column="2">
+                            <widget class="QLabel" name="label_17">
+                             <property name="text">
+                              <string>Y Start</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="1" column="0">
+                            <widget class="QLabel" name="label_14">
+                             <property name="text">
+                              <string>X Width</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="1" column="2">
+                            <widget class="QLabel" name="label_16">
+                             <property name="text">
+                              <string>X Start</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="1" column="5">
+                            <spacer name="horizontalSpacer_4">
+                             <property name="orientation">
+                              <enum>Qt::Horizontal</enum>
+                             </property>
+                             <property name="sizeHint" stdset="0">
+                              <size>
+                               <width>40</width>
+                               <height>20</height>
+                              </size>
+                             </property>
+                            </spacer>
+                           </item>
+                           <item row="4" column="2">
+                            <widget class="QLabel" name="label_19">
+                             <property name="text">
+                              <string>Radius</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="1" column="1">
+                            <widget class="QLineEdit" name="xSquareWidth">
+                             <property name="maximumSize">
+                              <size>
+                               <width>75</width>
+                               <height>16777215</height>
+                              </size>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="2" column="1">
+                            <widget class="QLineEdit" name="ySquareDepth">
+                             <property name="maximumSize">
+                              <size>
+                               <width>75</width>
+                               <height>16777215</height>
+                              </size>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="4" column="1">
+                            <widget class="QLineEdit" name="squareSubName">
+                             <property name="maximumSize">
+                              <size>
+                               <width>75</width>
+                               <height>16777215</height>
+                              </size>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="4" column="0">
+                            <widget class="QLabel" name="label_18">
+                             <property name="text">
+                              <string>Sub Name</string>
+                             </property>
+                             <property name="alignment">
+                              <set>Qt::AlignCenter</set>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="2" column="0">
+                            <widget class="QLabel" name="label_15">
+                             <property name="text">
+                              <string>Y Depth</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="2" column="3">
+                            <widget class="QLineEdit" name="ySquareStart">
+                             <property name="maximumSize">
+                              <size>
+                               <width>75</width>
+                               <height>16777215</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string>0</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="3" column="0">
+                            <widget class="QLabel" name="label_20">
+                             <property name="text">
+                              <string>Lead In</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="3" column="1">
+                            <widget class="QLineEdit" name="squareLeadIn">
+                             <property name="maximumSize">
+                              <size>
+                               <width>75</width>
+                               <height>16777215</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string>0</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="4" column="3">
+                            <widget class="QLineEdit" name="zSquareRadius">
+                             <property name="maximumSize">
+                              <size>
+                               <width>75</width>
+                               <height>16777215</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string>0</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="2" column="6" rowspan="3">
+                            <widget class="QPushButton" name="squareGenFileBtn">
+                             <property name="text">
+                              <string>Generate
+Subroutine</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="3" column="3">
+                            <widget class="QLineEdit" name="squareLeadOut">
+                             <property name="maximumSize">
+                              <size>
+                               <width>75</width>
+                               <height>16777215</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string>0</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="3" column="2">
+                            <widget class="QLabel" name="label_21">
+                             <property name="text">
+                              <string>Lead Out</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="1" column="3">
+                            <widget class="QLineEdit" name="xSquareStart">
+                             <property name="maximumSize">
+                              <size>
+                               <width>75</width>
+                               <height>16777215</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string>0</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="0" column="0" colspan="7">
+                            <widget class="QLabel" name="label_22">
+                             <property name="text">
+                              <string>Square assumes starting in the lower left corner and going CW</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                   <widget class="QWidget" name="tab_12">
+                    <attribute name="title">
+                     <string>Circle</string>
+                    </attribute>
+                   </widget>
                   </widget>
                  </item>
                 </layout>
@@ -1987,6 +2374,11 @@ Program</string>
    <class>StatusLabel</class>
    <extends>QLabel</extends>
    <header>qtpyvcp.widgets.display_widgets.status_label</header>
+  </customwidget>
+  <customwidget>
+   <class>StatusLED</class>
+   <extends>QWidget</extends>
+   <header>qtpyvcp.widgets.display_widgets.status_led</header>
   </customwidget>
   <customwidget>
    <class>VCPSettingsSlider</class>
