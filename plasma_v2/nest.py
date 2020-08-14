@@ -60,6 +60,7 @@ def nestedParts(parent):
   else:
     sub.append('F{}'.format(parent.cutSpeedLbl.text()))
   sub.append('#<xStart> = [#5221 + #5420]') # get current absolute X position
+  sub.append('#<yStart> = [#5222 + #5421]') # get current absolute Y position
   sub.append('G10 L20 P0 X0 Y0') # set current point as X0 Y0
 
 
@@ -109,6 +110,7 @@ def nestedParts(parent):
 
   sub.append('G10 L2 P0 X0 Y0')
   sub.append('G53 G0 Z0')
+  sub.append('G0 X#<xStart> Y#<yStart>')
   sub.append('M2')
 
   buildLoad(parent, sub)

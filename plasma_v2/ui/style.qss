@@ -35,7 +35,7 @@ QPushButton#exitAppBtn{
 
 QGroupBox[page="dro"], StatusLabel{
     font: "FreeSans";
-    font-size: 12pt;
+    font-size: 11pt;
     font-weight: Bold;
 }
 

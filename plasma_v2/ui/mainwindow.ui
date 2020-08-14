@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1248</width>
-    <height>811</height>
+    <width>1275</width>
+    <height>894</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -72,7 +72,7 @@
              <enum>QTabWidget::South</enum>
             </property>
             <property name="currentIndex">
-             <number>1</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="tab_3">
              <attribute name="title">
@@ -247,7 +247,7 @@
                 <enum>QTabWidget::South</enum>
                </property>
                <property name="currentIndex">
-                <number>7</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="tab_6">
                 <attribute name="title">
@@ -1921,32 +1921,12 @@ Subroutine</string>
                     </widget>
                    </item>
                    <item row="0" column="1">
-                    <widget class="ActionButton" name="actionbutton_10">
+                    <widget class="ActionButton" name="actionbutton_14">
                      <property name="text">
-                      <string>Y+</string>
+                      <string>X-</string>
                      </property>
                      <property name="actionName" stdset="0">
-                      <string>machine.jog.axis:y,pos</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="2">
-                    <widget class="ActionButton" name="actionbutton_11">
-                     <property name="text">
-                      <string>Z+</string>
-                     </property>
-                     <property name="actionName" stdset="0">
-                      <string>machine.jog.axis:z,pos</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="2">
-                    <widget class="ActionButton" name="actionbutton_12">
-                     <property name="text">
-                      <string>Z-</string>
-                     </property>
-                     <property name="actionName" stdset="0">
-                      <string>machine.jog.axis:z,neg</string>
+                      <string>machine.jog.axis:x,neg</string>
                      </property>
                     </widget>
                    </item>
@@ -1961,13 +1941,152 @@ Subroutine</string>
                     </widget>
                    </item>
                    <item row="1" column="0">
-                    <widget class="ActionButton" name="actionbutton_14">
+                    <widget class="ActionButton" name="actionbutton_10">
                      <property name="text">
-                      <string>X-</string>
+                      <string>Y+</string>
                      </property>
                      <property name="actionName" stdset="0">
-                      <string>machine.jog.axis:x,neg</string>
+                      <string>machine.jog.axis:y,pos</string>
                      </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="ActionButton" name="actionbutton_11">
+                     <property name="text">
+                      <string>Z+</string>
+                     </property>
+                     <property name="actionName" stdset="0">
+                      <string>machine.jog.axis:z,pos</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="ActionButton" name="actionbutton_12">
+                     <property name="text">
+                      <string>Z-</string>
+                     </property>
+                     <property name="actionName" stdset="0">
+                      <string>machine.jog.axis:z,neg</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QGroupBox" name="gridGroupBox">
+                  <property name="title">
+                   <string>Settings</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_12">
+                   <property name="leftMargin">
+                    <number>5</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>5</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>5</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>5</number>
+                   </property>
+                   <property name="spacing">
+                    <number>5</number>
+                   </property>
+                   <item row="1" column="1">
+                    <widget class="ActionButton" name="actionbutton_22">
+                     <property name="text">
+                      <string>0.01</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="actionName" stdset="0">
+                      <string>machine.jog.set-increment:0.01</string>
+                     </property>
+                     <attribute name="buttonGroup">
+                      <string notr="true">incBtnGrp</string>
+                     </attribute>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="ActionButton" name="actionbutton_21">
+                     <property name="text">
+                      <string>Cont</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="checked">
+                      <bool>false</bool>
+                     </property>
+                     <property name="actionName" stdset="0">
+                      <string>machine.jog-mode.continuous</string>
+                     </property>
+                     <attribute name="buttonGroup">
+                      <string notr="true">jogBtnGrp</string>
+                     </attribute>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="ActionButton" name="actionbutton_20">
+                     <property name="text">
+                      <string>Inc</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="checked">
+                      <bool>true</bool>
+                     </property>
+                     <property name="actionName" stdset="0">
+                      <string>machine.jog-mode.incremental</string>
+                     </property>
+                     <attribute name="buttonGroup">
+                      <string notr="true">jogBtnGrp</string>
+                     </attribute>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="ActionButton" name="actionbutton_23">
+                     <property name="text">
+                      <string>0.1</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="checked">
+                      <bool>true</bool>
+                     </property>
+                     <property name="actionName" stdset="0">
+                      <string>machine.jog.set-increment:0.1</string>
+                     </property>
+                     <attribute name="buttonGroup">
+                      <string notr="true">incBtnGrp</string>
+                     </attribute>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="ActionButton" name="actionbutton_24">
+                     <property name="text">
+                      <string>0.001</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="checked">
+                      <bool>false</bool>
+                     </property>
+                     <property name="actionName" stdset="0">
+                      <string>machine.jog.set-increment:0.001</string>
+                     </property>
+                     <attribute name="buttonGroup">
+                      <string notr="true">incBtnGrp</string>
+                     </attribute>
                     </widget>
                    </item>
                   </layout>
@@ -2411,6 +2530,94 @@ Program</string>
    <header>qtpyvcp.widgets.display_widgets.notification_widget</header>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>exitAppBtn</tabstop>
+  <tabstop>actionbutton_3</tabstop>
+  <tabstop>actionbutton_2</tabstop>
+  <tabstop>actionbutton</tabstop>
+  <tabstop>actionbutton_15</tabstop>
+  <tabstop>probe_sim</tabstop>
+  <tabstop>mdibutton</tabstop>
+  <tabstop>mdibutton_2</tabstop>
+  <tabstop>actionbutton_16</tabstop>
+  <tabstop>thc_enable</tabstop>
+  <tabstop>actionbutton_8</tabstop>
+  <tabstop>actionbutton_7</tabstop>
+  <tabstop>actionbutton_5</tabstop>
+  <tabstop>actionbutton_6</tabstop>
+  <tabstop>actionbutton_4</tabstop>
+  <tabstop>viewP</tabstop>
+  <tabstop>viewX</tabstop>
+  <tabstop>viewY</tabstop>
+  <tabstop>viewZ</tabstop>
+  <tabstop>viewZ2</tabstop>
+  <tabstop>viewPlus</tabstop>
+  <tabstop>viewMinus</tabstop>
+  <tabstop>viewClear</tabstop>
+  <tabstop>mdibutton_4</tabstop>
+  <tabstop>mdibutton_3</tabstop>
+  <tabstop>mdibutton_5</tabstop>
+  <tabstop>actionbutton_18</tabstop>
+  <tabstop>actionbutton_19</tabstop>
+  <tabstop>actionbutton_17</tabstop>
+  <tabstop>mdientry_2</tabstop>
+  <tabstop>actionbutton_9</tabstop>
+  <tabstop>actionslider_3</tabstop>
+  <tabstop>actionslider_2</tabstop>
+  <tabstop>settings_slider</tabstop>
+  <tabstop>fileOpenParentBtn</tabstop>
+  <tabstop>fileOpenDirBtn</tabstop>
+  <tabstop>fileMoveUpBtn</tabstop>
+  <tabstop>fileMoveDownBtn</tabstop>
+  <tabstop>fileLoadBtn</tabstop>
+  <tabstop>materialLbl</tabstop>
+  <tabstop>materialBackBtn</tabstop>
+  <tabstop>materialFwdBtn</tabstop>
+  <tabstop>nozzleLbl</tabstop>
+  <tabstop>nozzleBackBtn</tabstop>
+  <tabstop>nozzleFwdBtn</tabstop>
+  <tabstop>gaugeLbl</tabstop>
+  <tabstop>gaugeBackBtn</tabstop>
+  <tabstop>gaugeFwdBtn</tabstop>
+  <tabstop>ampsLbl</tabstop>
+  <tabstop>ampsBackBtn</tabstop>
+  <tabstop>ampsFwdBtn</tabstop>
+  <tabstop>cutVoltsLbl</tabstop>
+  <tabstop>cutAmpsLbl</tabstop>
+  <tabstop>cutHeightLbl</tabstop>
+  <tabstop>pierceHeightLbl</tabstop>
+  <tabstop>pierceDelayLbl</tabstop>
+  <tabstop>cutSpeedLbl</tabstop>
+  <tabstop>cutWidthLbl</tabstop>
+  <tabstop>xPartsCountSb</tabstop>
+  <tabstop>xPartsSpacingSb</tabstop>
+  <tabstop>xPartRotationSb</tabstop>
+  <tabstop>partsTestRb</tabstop>
+  <tabstop>partsCutRb</tabstop>
+  <tabstop>yPartsCountSb</tabstop>
+  <tabstop>yPartsSpacingSb</tabstop>
+  <tabstop>yPartRotationSb</tabstop>
+  <tabstop>xEvenOffsetSb</tabstop>
+  <tabstop>partTestZ</tabstop>
+  <tabstop>partsZcb</tabstop>
+  <tabstop>doubleSpinBox</tabstop>
+  <tabstop>partsBuildLoadBtn</tabstop>
+  <tabstop>partsBuildSaveBtn</tabstop>
+  <tabstop>xSquareWidth</tabstop>
+  <tabstop>ySquareDepth</tabstop>
+  <tabstop>squareLeadIn</tabstop>
+  <tabstop>squareSubName</tabstop>
+  <tabstop>xSquareStart</tabstop>
+  <tabstop>ySquareStart</tabstop>
+  <tabstop>squareLeadOut</tabstop>
+  <tabstop>zSquareRadius</tabstop>
+  <tabstop>squareGenFileBtn</tabstop>
+  <tabstop>vtkbackplot</tabstop>
+  <tabstop>tabWidget_3</tabstop>
+  <tabstop>filesystemtable</tabstop>
+  <tabstop>subTreeView</tabstop>
+  <tabstop>gcodeeditor</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>
@@ -2623,8 +2830,10 @@ Program</string>
   </connection>
  </connections>
  <buttongroups>
+  <buttongroup name="incBtnGrp"/>
   <buttongroup name="partsBtnGrp"/>
-  <buttongroup name="modeBtnGrp"/>
   <buttongroup name="viewBtnGrp"/>
+  <buttongroup name="modeBtnGrp"/>
+  <buttongroup name="jogBtnGrp"/>
  </buttongroups>
 </ui>

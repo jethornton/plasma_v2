@@ -43,7 +43,7 @@ def squareSubroutine(parent):
   part.append('G1 X{} Y{}'.format(xPlus, yMinus)) #
   part.append('G1 X{} Y{}'.format(xMinus, yMinus)) #
   if leadOut <> '0': # calculate lead out arc
-    part.append('G3 X-{} Y-{} I{} J-{}'.format(leadOut, leadOut, 0, leadOut)) #
+    part.append('G3 X0 Y0 I0 J-{}'.format(leadOutLeg)) #
   if subName.isdigit():
     part.append('o{} endsub'.format(subName)) # end a numbered subroutine
   else:
@@ -60,3 +60,5 @@ def squareSubroutine(parent):
   else:
     parent.statusbar.showMessage('File Saved as {}'.format(filePath), 6000)
 
+  #for line in part:
+  #  print(line)
